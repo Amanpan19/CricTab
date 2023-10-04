@@ -1,0 +1,35 @@
+<div class="container">
+    <div id="chips">
+        <mat-chip-listbox aria-label="Fish selection" #chipList (click)="changedValue()" [(ngModel)]="selectedValue">
+            <mat-chip-option color="warn" selected value="odi">ODI</mat-chip-option>
+            <mat-chip-option value="t20">T-20</mat-chip-option>
+            <mat-chip-option value="test">Test</mat-chip-option>
+        </mat-chip-listbox>
+        <hr>
+
+        <mat-chip-listbox aria-label="Fish selection" #chipList (click)="changedValue()" [(ngModel)]="rankingType">
+            <mat-chip-option color="warn" selected value="batsmen">Batsmen</mat-chip-option>
+            <mat-chip-option value="bowlers">Bowlers</mat-chip-option>
+            <mat-chip-option value="allrounders">All Rounders</mat-chip-option>
+            <mat-chip-option value="teams">teams</mat-chip-option>
+        </mat-chip-listbox>
+    </div>
+    <div class="rankCont" *ngIf="teams">
+         <pre id="heading"> Position            Player                        Country               Rating</pre>
+         <div id="pRanking" *ngFor="let data of rankingList">
+         <pre>
+    {{data.rank.padEnd(15) }}{{data.name.padEnd(32) }}{{data.country.padEnd(12) }}{{(data.rating || 0).toString().padStart(14, ' ') }}</pre>
+        <hr id="endLine">
+         </div>
+    </div>
+    <div class="rankCont" *ngIf="!teams">
+        <pre id="heading"> Position            Country                      Matches              Rating</pre>
+        <div id="pRanking" *ngFor="let data of teamRankingList">
+        <pre>
+   {{data.rank.padEnd(18) }}{{data.name.padEnd(31) }}{{data.matches.padEnd(10) }}{{(data.rating || 0).toString().padStart(14, ' ') }}</pre>
+       <hr id="endLine">
+        </div>
+   </div>
+</div>
+
+
