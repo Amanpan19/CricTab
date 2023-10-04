@@ -1,0 +1,33 @@
+<div class="mainCont">
+    <div class="containerMain">
+    <div id="scrollerCOnt">
+        <div class="scroller" >
+            
+                <div  *ngFor="let listOfLive of list" >
+                    <div class="contentCont" *ngFor="let match of listOfLive">
+                        <p id="seriesName">{{match?.matchInfo?.seriesName}}</p>
+                        <p style="text-align: center;" id="teams">{{match?.matchInfo.team1?.teamSName}} vs {{match?.matchInfo.team2?.teamSName}}</p>
+                        <div class="tab">
+                            <table>
+                                <tr>
+                                    <td>{{match?.matchInfo.team1?.teamName}}</td>
+                                    <td id="score">{{match?.matchScore.team1Score?.inngs1?.runs || 0}}/{{match?.matchScore.team1Score?.inngs1?.wickets || 0}}
+                                    </td>
+                                    <td>({{match?.matchScore.team1Score?.inngs1?.overs || 0}})</td>
+                                </tr>
+                                <tr>
+                                    <td>{{match?.matchInfo.team2?.teamName}}</td>
+                                    <td id="score">{{match?.matchScore.team2Score?.inngs1?.runs || 0}}/{{match?.matchScore.team2Score?.inngs1?.wickets || 0}}</td>
+                                    <td>({{match?.matchScore.team2Score?.inngs1?.overs || 0}})</td>
+                                </tr>
+                            </table>
+                    </div>
+                    <p id="status">{{match?.matchInfo.status}}</p>
+            </div>
+           
+       </div>
+       <button id="btn1" (click)="moveLeft()"><i class='fas fa-angle-left'></i></button>
+       <button id="btn2" (click)="moveRight()"><i class='fas fa-angle-right'></i></button>
+    </div>
+    </div>
+</div>

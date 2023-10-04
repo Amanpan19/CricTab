@@ -1,0 +1,98 @@
+.mainCont{
+    margin-top: 10%;
+    
+}
+
+.containerMain{
+    position: relative;
+    width:40%;
+    height: 180px;
+    margin: auto;
+    border-radius: 8px;
+    border: 1px solid rgb(202, 200, 200);
+}
+
+#scrollerCOnt{
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+}
+#scrollerCOnt::-webkit-scrollbar{
+    width: 3px;
+}
+
+#btn1{
+   left:-25px;
+}
+
+#btn2{
+   right:-25px;
+}
+
+#btn1, #btn2{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+i{
+    font-size: 20px;
+}
+
+.contentCont{
+    width: 280px;
+    height: 160px;
+    border: 1px solid rgb(197, 193, 193);
+    margin: 9px auto;
+    display:inline-block;
+    margin-left: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    background:linear-gradient(45deg,rgb(194, 95, 237),rgb(251, 83, 228));
+    /* position: relative; */
+}
+
+.scroller{
+    width:200%;
+    height: 30%;
+}
+
+#seriesName{
+    color: white;
+    text-align: center;
+    margin: 4px;
+}
+#status,
+#teams,#desc{
+    text-align: center;
+}
+#teams{
+    background-color: brown;
+    margin-top:8px;
+}
+#status{
+    background-color: blueviolet;
+    margin-top:14px;
+}
+.tab{
+    margin-top: -6px;
+    margin-bottom: 3px;
+}
+table{
+    margin-left: 20px;
+    color: white;
+}
+#score{
+    text-align:right;
+    padding-left: 17px;
+}
+p{
+    color: white;
+    font-size: 12px;
+}
