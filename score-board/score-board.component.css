@@ -1,0 +1,46 @@
+#loading{
+    width:100vh;
+    height: 30vh;
+    margin: auto;
+    background: url(../../assets/Pinwheel.gif) no-repeat center;
+  }
+
+.container{
+    position: relative;
+    top: 15%;
+}
+#heading{
+    background-color: rgb(223, 223, 218);
+    font-weight: 600;
+}
+.scoreCard{
+    width:720px;
+    /* border-bottom: 1px solid rgb(154, 154, 154); */
+    margin: auto;
+    background-color: white;
+}
+
+#batsManCards{
+    /* border-bottom: 1px solid rgb(200, 199, 199); */
+    margin: auto;
+}
+
+#pName{
+    color: rgb(18, 131, 196);
+    font-weight: 600;
+}
+#score{
+    margin-left: 3%; font-weight: 600; color: rgb(0, 140, 255);
+}
+#extra{
+    margin-left: 3%; font-weight: 600; color: rgb(255, 0, 89);
+}
+
+hr{
+    margin-top: -5px;
+    border-top: 1px solid rgb(226, 226, 229);
+}
+
+mat-tab-group{
+   
+}
