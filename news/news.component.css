@@ -1,0 +1,50 @@
+header{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    margin-top:-118px;
+    position: fixed;
+    width: 60%;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: white;
+    padding: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 99;
+    text-align: center;
+}
+
+#portion{
+    margin-top:200px;
+}
+
+.card{
+    width: 55%;
+    height:auto;
+    border: 1px solid black;
+    background-color:white;
+    margin: 100px auto;
+    position: relative;
+    padding-bottom: 70px;
+}
+
+#headLine{
+    text-align: center;
+    font-size: 25px;
+    padding: 10px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-weight: 600;
+    line-height: 35px;
+}
+ul{
+    width: 70%;
+    margin: auto;
+    background-color: rgb(209, 251, 25);
+    text-align: center;
+}
+#source{
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    font-size: 12px;
+}
+
