@@ -1,0 +1,27 @@
+<div id="heading">
+    <mat-chip-listbox aria-label="Fish selection" #chipList name="matchType" (click)="getMatches()" [(ngModel)]="selectedMatchType" id="matchTypeSelect">
+      <mat-chip-option color="warn" selected value="International">International</mat-chip-option>
+      <mat-chip-option value="League">League</mat-chip-option>
+      <mat-chip-option value="Domestic">Domestic</mat-chip-option>
+      <mat-chip-option value="Women">Women</mat-chip-option>
+  </mat-chip-listbox>
+</div>
+<app-live-mat></app-live-mat>
+<div class="portion">
+  <div *ngIf="isLoading" id="loading"></div>
+  <div *ngFor="let listMat of listOfMatches" id="card">
+    
+    <mat-card class="example-card" *ngIf="listMat.seriesMatches">
+      <mat-card-header>
+        <mat-card-title style="color: rgb(255, 5, 68);">Series</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p id="seriesName">{{listMat.seriesMatches?.seriesName}}</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button  routerLink="/matches" (click)="getSeriesId(listMat.seriesMatches?.seriesId)">Check Matches</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>
+
