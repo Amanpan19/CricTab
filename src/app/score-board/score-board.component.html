@@ -1,0 +1,66 @@
+<!-- Do NOt Change The format -->
+
+<div class="container">
+    <!-- <div class="scoreCard" *ngFor="let score of scoreBoard"> -->
+    <div class="scoreCard">
+        
+        <div class="innings">
+            <div *ngIf="isLoading" id="loading"></div>
+            <mat-tab-group>
+                
+                <mat-tab label="First Ininnigs" class="ing1">
+                    <div>
+                        <pre id="heading">   Batter                           R          B           4s          6s           SR</pre>
+                    </div> 
+                   <ng-container *ngFor="let matchStats of scoreBoard[0]?.batsman">
+                <pre id="batsManCards" >
+  <span id="pName">{{ matchStats?.name.padEnd(25.5)}}</span>{{ (matchStats?.runs || 0).toString().padStart(10, ' ') }}{{ (matchStats?.balls || 0).toString().padStart(12, ' ') }}{{ (matchStats?.fours || 0).toString().padStart(11.5, ' ') }}{{ (matchStats?.sixes || 0).toString().padStart(12, ' ') }}{{ (matchStats?.strkRate || 0).toString().padStart(16, ' ') }}
+                </pre>
+                <hr>
+                   </ng-container>
+                   <pre *ngIf="scoreBoard[0]"><Span id="score">Score    :  </Span>{{scoreBoard[0]?.score}}/{{scoreBoard[0]?.wickets}} ({{scoreBoard[0]?.overs}})</pre>
+                   <pre *ngIf="scoreBoard[0]"><Span id="extra">Extra    :  </Span>{{scoreBoard[0]?.extras.total}}</pre>
+                   <p 
+                   style="color: rgb(74, 193, 143);
+                    font-weight: 600;
+                     font-size: 22px;
+                     text-align: center;margin-top: 10px;">Bowling</p>
+                   <div>
+                        <pre id="heading">   Bowler                           O          R           W          Eco</pre>
+                   </div>
+                   <ng-container *ngFor="let matchStats of scoreBoard[0]?.bowler">
+                <pre id="batsManCards" >
+  <span id="pName">{{ matchStats?.name.padEnd(25.5)}}</span>{{ (matchStats?.overs || 0).toString().padStart(10, ' ') }}{{ (matchStats?.runs || 0).toString().padStart(12, ' ') }}{{ (matchStats?.wickets || 0).toString().padStart(11.5, ' ') }}{{ (matchStats?.economy || 0).toString().padStart(12, ' ') }}
+                                      </pre>
+                   </ng-container>
+                </mat-tab>
+                <mat-tab label="Second Ininnigs">
+                    <div>
+                        <pre id="heading">   Batter                           R          B           4s          6s           SR</pre>
+                    </div>
+                    <ng-container *ngFor="let matchStats of scoreBoard[1]?.batsman">
+                 <pre id="batsManCards" >
+  <span id="pName">{{ matchStats?.name.padEnd(25.5)}}</span>{{ (matchStats?.runs || 0).toString().padStart(10, ' ') }}{{ (matchStats?.balls || 0).toString().padStart(12, ' ') }}{{ (matchStats?.fours || 0).toString().padStart(11.5, ' ') }}{{ (matchStats?.sixes || 0).toString().padStart(12, ' ') }}{{ (matchStats?.strkRate || 0).toString().padStart(16, ' ') }}
+                 </pre>
+                 <hr>
+                    </ng-container>
+                    <pre *ngIf="scoreBoard[1]"><Span id="score">Score    :  </Span>{{scoreBoard[1]?.score}}/{{scoreBoard[1]?.wickets}}  ({{scoreBoard[1]?.overs}})</pre>
+                    <pre *ngIf="scoreBoard[1]"><Span id="extra">Extra    :  </Span>{{scoreBoard[1]?.extras.total}}</pre>
+                    <p 
+                   style="color: rgb(74, 193, 143);
+                    font-weight: 600;
+                     font-size: 22px;
+                     text-align: center;margin-top: 10px;">Bowling</p>
+                   <div>
+                        <pre id="heading">   Bowler                           O          R           W          Eco</pre>
+                   </div>
+                   <ng-container *ngFor="let matchStats of scoreBoard[1]?.bowler">
+                <pre id="batsManCards" >
+  <span id="pName">{{ matchStats?.name.padEnd(25.5)}}</span>{{ (matchStats?.overs || 0).toString().padStart(10, ' ') }}{{ (matchStats?.runs || 0).toString().padStart(12, ' ') }}{{ (matchStats?.wickets || 0).toString().padStart(11.5, ' ') }}{{ (matchStats?.economy || 0).toString().padStart(12, ' ') }}
+                                      </pre>
+                   </ng-container>
+                 </mat-tab>
+            </mat-tab-group>
+        </div>
+    </div>
+</div>

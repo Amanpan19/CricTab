@@ -1,0 +1,13 @@
+
+<div id="portion">
+    <header style="font-size: 40px;">News</header>
+    <div *ngFor="let news of newsDetails" >
+      <div *ngIf="news.story" class="card">
+         <p *ngIf="news.story" id="headLine">{{news.story?.hline}}</p>
+         <ul>
+            <li>{{news.story?.intro}}</li>
+         </ul>
+         <p id="source">Source : {{news.story?.source}}</p>
+      </div>
+    </div>
+</div>
