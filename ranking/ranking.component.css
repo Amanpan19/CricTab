@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300&display=swap');
+
+.container{
+    width: 60%;
+    margin: 120px auto 0 auto; 
+    font-family:Space-Gortesk;
+}
+#chips{
+    background-color: white;
+    width: 90%;
+    margin: auto;
+    padding: 10px;
+    border-radius: 8px;
+}
+hr{
+    border: 1px solid rgb(0, 0, 0);
+}
+
+#heading{
+    background-color: burlywood;
+    font-weight: 600;
+}
+
+.rankCont{
+    border-radius: 8px;
+    outline: none;
+    background-color: rgb(241, 237, 231);
+    width:640px;
+    height: 100%;
+    margin: 50px auto;
+    padding: 10px;
+}
+#endLine{
+    border: 0.1px solid rgb(216, 213, 213);
+    margin-top: -8px;
+}
